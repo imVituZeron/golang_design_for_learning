@@ -29,9 +29,8 @@ func main() {
 		fmt.Println("Digite seu profissao: ")
 		fmt.Scan(&work)
 
-		people := Pessoa{i, name, lastname, work}
-
-		list = append(list, people)
+		people := Pessoa{i, name, lastname, work} // create instance of Pessoa
+		list = append(list, people)               // add instance in the Slice
 
 		fmt.Println("Deseja Continuar? [y/n]")
 		var code string
