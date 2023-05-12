@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	P "project/packages/models"
-	create "project/packages/utils"
+	utils "project/packages/utils"
 )
 
 var (
@@ -38,6 +38,6 @@ func main() {
 		}
 	}
 
-	exit := create.Createfile(listPeople)
+	exit := utils.Createfile(listPeople)
 	fmt.Println(exit)
 }
