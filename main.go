@@ -2,14 +2,9 @@ package main
 
 import (
 	"fmt"
+	P "project/packages/models"
+	create "project/packages/utils"
 )
-
-type Pessoa struct {
-	Id        int
-	nome      string
-	sobrenome string
-	profissao string
-}
 
 var (
 	name     string
@@ -19,7 +14,7 @@ var (
 
 func main() {
 	i := 0
-	list := []Pessoa{}
+	listPeople := []P.Pessoa{}
 
 	for {
 		fmt.Println("Digite seu nome: ")
@@ -29,8 +24,8 @@ func main() {
 		fmt.Println("Digite seu profissao: ")
 		fmt.Scan(&work)
 
-		people := Pessoa{i, name, lastname, work} // create instance of Pessoa
-		list = append(list, people)               // add instance in the Slice
+		people := P.Pessoa{i, name, lastname, work} // create instance of Pessoa
+		listPeople = append(listPeople, people)     // add instance in the Slice
 
 		fmt.Println("Deseja Continuar? [y/n]")
 		var code string
@@ -43,5 +38,6 @@ func main() {
 		}
 	}
 
-	fmt.Println(list)
+	exit := create.Createfile(listPeople)
+	fmt.Println(exit)
 }
