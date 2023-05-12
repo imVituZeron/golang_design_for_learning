@@ -7,9 +7,7 @@ import (
 )
 
 var (
-	name     string
-	lastname string
-	work     string
+	name, lastname, work, code string
 )
 
 func main() {
@@ -28,7 +26,6 @@ func main() {
 		listPeople = append(listPeople, people)     // add instance in the Slice
 
 		fmt.Println("Deseja Continuar? [y/n]")
-		var code string
 		fmt.Scan(&code)
 		if code == "y" {
 			i++
