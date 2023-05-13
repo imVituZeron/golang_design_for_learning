@@ -30,7 +30,6 @@ func main() {
 		if code == "y" {
 			i++
 		} else if code == "n" {
-			fmt.Println("Finalizando!")
 			break
 		}
 	}
